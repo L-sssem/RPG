@@ -1,1 +1,114 @@
-export {};
+import type { AccessoryDef } from "@/types/game";
+
+export const accessories: AccessoryDef[] = [
+  {
+    id: "exp_ring_t1",
+    name: "経験の指輪",
+    tier: 1,
+    baseStats: { expRate: 8 },
+    baseEffectText: "獲得経験値+5〜12%",
+  },
+  {
+    id: "gold_ring_t1",
+    name: "金運の指輪",
+    tier: 1,
+    baseStats: { goldRate: 12 },
+    baseEffectText: "ゴールド獲得量+8〜18%",
+  },
+  {
+    id: "traveler_emblem_t1",
+    name: "旅人の印章",
+    tier: 1,
+    baseStats: { moveSpeed: 1 },
+    baseEffectText: "移動速度+1〜2",
+  },
+  {
+    id: "guardian_necklace_t1",
+    name: "守りの首飾り",
+    tier: 1,
+    baseStats: { hp: 80 },
+    baseEffectText: "最大HP+40〜120",
+  },
+  {
+    id: "boss_hunter_charm_t2",
+    name: "狩人の首飾り",
+    tier: 2,
+    baseEffectText: "ボスダメージ+5〜12%",
+  },
+  {
+    id: "drop_ring_t2",
+    name: "探財の指輪",
+    tier: 2,
+    baseStats: { dropRate: 6 },
+    baseEffectText: "ドロップ率+3〜10%",
+  },
+  {
+    id: "boss_material_medal_t3",
+    name: "討伐者の勲章",
+    tier: 3,
+    baseEffectText: "ボス素材ドロップ率+4〜10%",
+  },
+  {
+    id: "crit_eye_necklace_t3",
+    name: "魔眼の首飾り",
+    tier: 3,
+    baseStats: { critRate: 5 },
+    baseEffectText: "クリ率+3〜9%",
+  },
+  {
+    id: "loot_gold_emblem_t3",
+    name: "収奪の印章",
+    tier: 3,
+    baseEffectText: "敵撃破時5〜12%で追加ゴールド袋",
+  },
+  {
+    id: "king_treasure_charm_t4",
+    name: "王財の護符",
+    tier: 4,
+    baseStats: { goldRate: 15 },
+    baseEffectText: "ボス撃破時ゴールド+15〜35%",
+  },
+
+  {
+    id: "rebirth_ring_unique",
+    name: "輪廻の指輪",
+    tier: 3,
+    baseEffectText: "転生後Lv1〜30の獲得経験値+25%",
+    uniqueEffectId: "unique_rebirth_ring",
+  },
+  {
+    id: "abyss_charm_unique",
+    name: "深淵の護符",
+    tier: 4,
+    baseEffectText: "特殊ダンジョンでレア素材ドロップ率+20%",
+    uniqueEffectId: "unique_abyss_charm",
+  },
+  {
+    id: "golden_king_collar_unique",
+    name: "黄金王の首輪",
+    tier: 5,
+    baseEffectText: "ゴールド+20%、ボス撃破時に追加ゴールド袋確定",
+    uniqueEffectId: "unique_golden_king_collar",
+  },
+  {
+    id: "hunt_god_seal_unique",
+    name: "狩神の印章",
+    tier: 5,
+    baseEffectText: "ボス素材ドロップ率+15%、ボスダメージ+10%",
+    uniqueEffectId: "unique_hunt_god_seal",
+  },
+  {
+    id: "immortal_ring_unique",
+    name: "不滅の環",
+    tier: 5,
+    baseEffectText: "最大HP+250、防御+15",
+    uniqueEffectId: "unique_immortal_ring",
+  },
+  {
+    id: "ash_ring_unique",
+    name: "灰輪の指輪",
+    tier: 5,
+    baseEffectText: "転生回数×1%攻撃力上昇",
+    uniqueEffectId: "unique_ash_ring",
+  },
+];
