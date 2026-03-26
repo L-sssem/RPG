@@ -21,12 +21,12 @@ import { getBaseExpToNextLevel } from "@/data/balance/levels";
 import { rebirthBonusPerCount, rebirthExpMultipliers } from "@/data/balance/rebirth";
 import { systemBalance } from "@/data/balance/system";
 import type {
+  AccessoryDef,
   EnemyDef,
   GearBaseDef,
   GearRank,
   GearSlot,
   StatBlock,
-  StatKey,
   Tier,
 } from "@/types/game";
 
@@ -34,8 +34,9 @@ type WeightedEntry<T extends string> = Record<T, number>;
 type AccessoryRank = keyof typeof accessoryRankRates;
 type TierKey = `tier${Tier}`;
 type OptionKey = keyof typeof optionValueRanges;
+type CoreStatKey = keyof Pick<Required<StatBlock>, "hp" | "attack" | "defense">;
 
-const CORE_STATS: StatKey[] = ["hp", "attack", "defense"];
+const CORE_STATS: CoreStatKey[] = ["hp", "attack", "defense"];
 
 function randomInt(min: number, max: number, rng: () => number): number {
   const span = max - min + systemBalance.minRollInclusiveOffset;
@@ -352,6 +353,6 @@ export function findGearBase(gearBaseId: string): GearBaseDef | undefined {
   return gearBases.find((gearBase) => gearBase.id === gearBaseId);
 }
 
-export function findAccessory(accessoryId: string) {
+export function findAccessory(accessoryId: string): AccessoryDef | undefined {
   return accessories.find((accessory) => accessory.id === accessoryId);
 }
